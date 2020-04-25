@@ -44,7 +44,8 @@ project "GLFW"
 
 	filter "system:windows"
 		systemversion "latest"
-		staticruntime "On"
+		--staticruntime "On"
+		staticruntime "Off"		
 
 		files
 		{
@@ -68,6 +69,7 @@ project "GLFW"
 	filter "configurations:Debug"
 		runtime "Debug"
 		symbols "on"
+		buildoptions "/MDd"
 
 	filter "configurations:Release"
 		runtime "Release"
